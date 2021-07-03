@@ -689,7 +689,7 @@ def main_ai(depth):
             value, new_board = minmax(game.get_board(), depth, True)
             game.ai_move(new_board)
         else:
-            value, new_board = alpha_beta_fox(game.get_board(), depth, True)
+            value, new_board = alpha_beta_fox(0, 0, game.get_board(), depth, True)
             game.ai_move(new_board)
 
         for event in pygame.event.get():
